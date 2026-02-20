@@ -1,0 +1,18 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+  a NUMBER := &A;
+  b NUMBER := &B;
+  c NUMBER := &C;
+BEGIN
+  IF a > b AND a > c THEN
+    DBMS_OUTPUT.PUT_LINE(a || ' is the biggest number');
+    
+  ELSIF b > a AND b > c THEN
+    DBMS_OUTPUT.PUT_LINE(b || ' is the biggest number');
+    
+  ELSE
+    DBMS_OUTPUT.PUT_LINE(c || ' is the biggest number');
+  END IF;
+END;
+/
