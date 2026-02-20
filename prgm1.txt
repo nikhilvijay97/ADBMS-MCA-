@@ -1,0 +1,8 @@
+DECLARE
+    a NUMBER := &a;
+    b NUMBER := &b;
+    c NUMBER;
+BEGIN
+    c := a + b;
+    DBMS_OUTPUT.PUT_LINE('Sum is ' || c);
+END;
