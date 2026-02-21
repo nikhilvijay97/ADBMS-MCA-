@@ -1,0 +1,20 @@
+DECLARE
+N NUMBER := &N;
+SUMS NUMBER := 0;
+REM NUMBER;
+TEMP NUMBER := N;
+BEGIN
+WHILE N > 0 LOOP
+    REM := MOD(N,10);
+    SUMS := SUMS + REM * REM * REM;
+    N := TRUNC(N/10);
+END LOOP;
+
+IF SUMS = TEMP THEN
+    DBMS_OUTPUT.PUT_LINE(TEMP || ' IS armstrong');
+ELSE
+    DBMS_OUTPUT.PUT_LINE(TEMP || ' IS not armstrong');
+END IF;
+
+END;
+/
