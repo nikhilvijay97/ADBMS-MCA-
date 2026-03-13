@@ -1,0 +1,23 @@
+CREATE OR REPLACE FUNCTION fun1
+(
+a NUMBER,
+b NUMBER
+)
+RETURN NUMBER
+IS
+c NUMBER;
+BEGIN
+c := a + b;
+RETURN c;
+END;
+
+
+
+DECLARE
+x NUMBER := &x;
+y NUMBER := &y;
+z NUMBER;
+BEGIN
+z := fun1(x, y);
+DBMS_OUTPUT.PUT_LINE('Sum is ' || z);
+END;
